@@ -13,5 +13,15 @@ namespace LuckyNumber
 		{
 			InitializeComponent();
 		}
-	}
+
+        private int ReturnRandomNumber()
+        {
+            return new Random().Next(10);
+        }
+
+        private void ClickBTN_Clicked(object sender, EventArgs e)
+        {
+            ClickBTN.Text = ReturnRandomNumber().ToString(). + " is uw geluksgetal";
+        }
+    }
 }
